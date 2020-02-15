@@ -59,6 +59,7 @@ class EobotAPI {
                 .getAsJSONObject(listener)
     }
 
+
     fun setMiningMode(userId : String, email : String, 
                     password : String, miningMode : String, 
                     listener : JSONObjectRequestListener) : Unit {
@@ -71,6 +72,7 @@ class EobotAPI {
                 .build()
                 .getAsJSONObject(listener)
     }
+
 
     fun setAutomaticWithdraw(userId : String, email : String, 
                                 password : String, currency : String, 
@@ -86,10 +88,11 @@ class EobotAPI {
                 .getAsJSONObject(listener)
     }
 
+
     fun manualWithdraw(userId : String, email : String, 
-                            password : String, currency : String, 
-                            amount : String, walletAddress : String, 
-                            listener : JSONObjectRequestListener) : Unit {
+                                password : String, currency : String, 
+                                amount : String, walletAddress : String, 
+                                listener : JSONObjectRequestListener) : Unit {
 
         val options = 'id='+userId+'&email='+email+'&password='+password+'&manualwithdraw='+currency+'&amount='+amount+'&wallet='+walletAddress
         val urlToCall = urlApi+options+"&json=true"
@@ -98,21 +101,6 @@ class EobotAPI {
                 .setPriority(Priority.LOW)
                 .build()
                 .getAsJSONObject(listener)
-    }            
-
-    fun buyCloudWithCryptocurrency(userId : String, email : String, 
-                                        password : String, currencyFrom : String, 
-                                        amount : String, cloudType : String, 
-                                        listener : JSONObjectRequestListener) : Unit {
-
-        val options = 'id='+userId+'&email='+email+'&password='+password+'&convertfrom='+currencyFrom+'&amount='+amount+'&convertto='+cloudType
-        val urlToCall = urlApi+options+"&json=true"
-        logger.info("Url to call: $urlToCall")
-        AndroidNetworking.get(urlToCall)
-                .setPriority(Priority.LOW)
-                .build()
-                .getAsJSONObject(listener)
-    }                            
-           
+    }                          
 
 }
