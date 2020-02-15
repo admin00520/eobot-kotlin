@@ -83,19 +83,13 @@ Every API uses as input all the parameters required by Eobot, in the same order 
 
 #### Get Balances
 Returns total account value followed by cryptocurrency balances. Pass in querystring userId.
-```kotlin
+```javascript
 fun getBalances(userId : String, listener : JSONObjectRequestListener) : Unit {}
 ```
 #### Get Mining Mode
 Returns the cryptocurrency you are currently mining. Pass in querystring UserID.
-```kotlin
+```javascript
 fun getMiningMode(userId : String, listener : JSONObjectRequestListener) : Unit {}
-```
-
-#### Get Speed
-Returns the mining and cloud speeds. Pass in querystring UserID.
-```kotlin
-fun getSpeed(userId : String, listener : JSONObjectRequestListener) : Unit {}
 ```
 
 ### Disclaimer
