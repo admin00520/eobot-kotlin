@@ -78,7 +78,7 @@ And the result must be something like this
 }
 ```
 
-## API Implementation
+## API Implmentation
 
 Every API uses as input all the parameters required by Eobot, in the same order as described in the developers page, and return a JSONObject.
 
